@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>minzy portfolio-sono</title>
+    <!--Import-->
+    <script type='text/javascript' src='./js/jquery-3.6.0.js'></script>
+    <script type='text/javascript' src='./js/common.js'></script>
+    <!--css-->
+    <link rel='stylesheet' href='./css/reset.css'>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <!--favicon-->
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link rel="icon" href="./img/favicon.ico">
+
+    <!-- library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="h-inner">
+                <button type="button" class="btn-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <h1 class="logo">
+                    <a href="./index.html">
+                        <img src="./img/logo/logo.svg" alt="로고 이미지" />
+                    </a>
+                </h1>
+            </div>
+        </header>
+
+        <!--콘텐츠-->
+        <div id="wrap_content" class="main">
+            <div class="move-item">
+                <ul>
+                    <li>Businiess</li>
+                    <li>Go for it 2030</li>
+                    <li>Vision</li>
+                    <li>Mission</li>
+                </ul>
+            </div>
+            <section class="slide_section">
+                <!-- Swiper -->
+                <div class="swiper main_slide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    var swiper = new Swiper(".main_slide", {
+                        autoplay : {
+                            delay: 2500,
+                        },
+                        spaceBetween: 30,
+                        effect: "fade",
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                        },
+                    });
+                </script>
+            </section>
+        </div>
+    </div>
+    <!--// end wrap-->
+
+</body>
+
+</html>

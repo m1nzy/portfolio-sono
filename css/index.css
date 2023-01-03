@@ -2,22 +2,25 @@
 
 /* main index.html */
 .main {
+    overflow-x: hidden;
     width: 100%;
-    height: 100vh;
     background: #dcdcda;
+    color: #676057;
 }
 
 .move-item {
-    position: fixed;
-    top: 50%;
-    transform:  rotate(-90deg);
-    transform-origin: 0 0 ;
-
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 120px;
-    margin: 280px 0 0;
+
+    position: fixed;
+    top: 50%;
+    transform: rotate(-90deg);
+    transform-origin: 0 0 ;
+    z-index: 10;
+
+    height: 12rem;
+    margin: 28rem 0 0;
 }
 
 .move-item ul {
@@ -26,9 +29,10 @@
 }
 
 .move-item li {
-    margin: 0 30px;
-    font-size: 20px;
+    margin: 0 3rem;
+    font-size: 2rem;
     color: #676057;
+    cursor: pointer;
 }
 
 .move-item li::after {
@@ -40,26 +44,308 @@
     transition: width .3s ease;
 }
 
-.move-item li.select::after {
+.move-item li.active::after,
+.move-item li:hover::after {
     width: 100%;
 }
 
 .main section {
-    width: calc(100% - 120px);
-    height: 100%;
-    margin-left: 120px;
+    width: calc(100% - 12rem);
+    margin-left: 12rem;
+    margin-bottom: 10.5rem;
 }
 
-.main .slide_section {
+.main .slide-section {
     position: relative;
 }
 
-.main .slide_text {
+.main .slide-text {
     position: absolute;
     bottom: 15%;
-    left: 120px;
-    z-index: 1;
-    font-size: 120px;
+    left: 12rem;
+    font-size: 12rem;
     font-weight: 100;
     color: #fff;
+}
+
+.main .swiper-slide {
+    width: 100%;
+}
+
+/* intro-section */
+.main .intro-section {
+    position: relative;
+    min-height: fit-content;
+    margin-bottom: 15rem;
+}
+
+.main .intro-section .img {
+    position: relative;
+    width: 100%;
+    height: 71.5rem;
+    margin-left: 33rem;
+    z-index: 1;
+}
+
+.main .intro-section .text {
+    position: absolute;
+    top: 15rem;
+    left: 22rem;
+    z-index: 1;
+
+    width: 80%;
+    line-height: 1.2;
+    font-size: 12rem;
+    font-weight: 100;
+    color: #fff;
+}
+
+.main .intro-section .text span {
+    display: block;
+}
+
+.main .intro-section a {
+    display: block;
+    position: absolute;
+    bottom: 3rem;
+    right: 10rem;
+    transition: .3s ease-in-out;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background: url('../img/icon/btn_main_arrow.svg') no-repeat center / cover;
+}
+
+.main .intro-section a:hover {
+    border-color: #fff;
+}
+
+.main .intro-section .circle {
+    top: 0;
+    width: 70rem;
+    height: 70rem;
+}
+
+/* text-section */
+.main .text-section .inner {
+    position: relative;
+    max-width: 144rem;
+    margin: 0 4rem 0 24rem;
+}
+
+.main .text-section a {
+    position: absolute;
+    top: 0;
+    right: 10rem;
+    transition: .3s ease-in-out;
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background: url('../img/icon/btn_main_arrow2.svg') no-repeat center / cover;
+}
+
+.main .text-section a:hover {
+    border-color: #676057;
+}
+
+.main .text-section article {
+    width: 80%;
+    margin-bottom: 8rem;
+    font-size: 10rem;
+}
+
+.main .text-section article:nth-of-type(even) {
+    margin-left: auto;
+    text-align: right;
+}
+
+.main .text-section h2 {
+    font-weight: 100;
+    word-break: keep-all;
+}
+
+.main .text-section b {
+    font-weight: 500;
+}
+
+.main .text-section p {
+    margin-top: 2rem;
+    font-size: 3.2rem;
+}
+
+.main .text-section .circle {
+    left: -40rem;
+    width: 184rem;
+    height: 184rem;
+}
+
+/* business-section */
+.main .business-section {
+    margin-bottom: 0;
+    padding-left: 17.4rem;
+    padding-bottom: 12rem;
+}
+
+.main .business-section .swiper-slide {
+    position: relative;
+    width: 46rem !important;
+}
+
+.main .business-section .link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    left: 3rem;
+    bottom: 1rem;
+    width: calc(100% - 6rem);
+    padding: 2rem 0 5rem;
+    border-top: 1px solid #fff;
+    font-size: 4rem;
+    color: #fff;
+}
+
+.main .business-section .link h3 {
+    font-weight: 100;
+}
+
+.main .business-section .link a {
+    transition: .3s ease-in-out;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background: url('../img/icon/btn_main_arrow.svg') no-repeat center / cover;
+}
+
+.main .business-section .swiper-slide:hover a {
+    border-color: #fff;
+}
+
+@media screen and (max-width: 1280px) {
+    .main {
+        overflow: hidden;
+    }
+    
+    .move-item {
+        display: none;
+        height: 12rem;
+        margin: 28rem 0 0;
+    }
+    
+    .main section {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10.5rem;
+    }
+    
+    .main .slide-section {
+        height: 100vh;
+    }
+
+    .main .slide-section .swiper {
+        height: 100%;
+    }
+    
+    .main .slide-text {
+        bottom: 15%;
+        left: 4.5rem;
+        font-size: 7rem;
+    }
+    
+    /* intro-section */
+    .main .intro-section {
+        margin-bottom: 15rem;
+    }
+    
+    .main .intro-section .img {
+        height: 50rem;
+        margin-left: 15rem;
+    }
+    
+    .main .intro-section .text {
+        top: 15rem;
+        left: 4.5rem;
+        font-size: 7rem;
+    }
+    
+    .main .intro-section .text span {
+    }
+    
+    .main .intro-section a {
+        bottom: 3rem;
+        right: 10rem;
+        width: 10rem;
+        height: 10rem;
+    }
+    
+    .main .intro-section a:hover {
+    }
+    
+    .main .intro-section .circle {
+        left: 4.5rem;
+        width: 70rem;
+        height: 70rem;
+    }
+    
+    /* text-section */
+    .main .text-section .inner {
+        width: 100%;
+        padding: 0 4.5rem;
+        margin: 0;
+    }
+    
+    .main .text-section a {
+        right: 10rem;
+        width: 10rem;
+        height: 10rem;
+    }
+    
+    .main .text-section article {
+        width: 69%;
+        margin-bottom: 8rem;
+        font-size: 7rem;
+    }
+    
+    .main .text-section p {
+        margin-top: 2rem;
+        font-size: 3.2rem;
+    }
+    
+    .main .text-section .circle {
+        left: -40rem;
+        width: 184rem;
+        height: 184rem;
+    }
+    
+    /* business-section */
+    .main .business-section {
+        padding-left: 17.4rem;
+        padding-bottom: 12rem;
+    }
+    
+    .main .business-section .swiper-slide {
+        width: 46rem !important;
+    }
+    
+    .main .business-section .link {
+        left: 3rem;
+        bottom: 1rem;
+        width: calc(100% - 6rem);
+        padding: 2rem 0 5rem;
+        font-size: 4rem;
+    }
+    
+    .main .business-section .link h3 {
+    }
+    
+    .main .business-section .link a {
+        width: 6rem;
+        height: 6rem;
+    }
+    
+    .main .business-section .swiper-slide:hover a {
+    }
 }

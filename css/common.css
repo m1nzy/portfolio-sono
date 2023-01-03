@@ -1,4 +1,6 @@
 @charset 'UTF-8';
+@import url('./reset.css');
+@import url('./font.css');
 
 /* --------------- header --------------- */
 #header {
@@ -6,7 +8,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px;
+    height: 8rem;
     z-index: 10;
 }
 
@@ -14,13 +16,13 @@
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 0 45px;
+    padding: 0 4.5rem;
 }
 
 #header .btn-menu {
     position: relative;
-    width: 32px;
-    height: 22px;
+    width: 3.2rem;
+    height: 2.2rem;
 }
 
 #header .btn-menu span {
@@ -34,13 +36,11 @@
 }
 
 #header .btn-menu span:nth-child(2) {
-    /* width: 20px; */
     top: 50%;
     transform: translateY(-50%);
 }
 
 #header .btn-menu span:nth-child(3) {
-    /* width: 12px; */
     top: auto;
     bottom: 0;
 }
@@ -57,12 +57,230 @@
 
 #header .btn-menu.active span:nth-child(3) {
     transform: rotate(-45deg);
-    top: 11px;
-    width: 24px;
+    top: 1.1rem;
+    width: 3.2rem;
 }
 
 #header .logo {
-    width: 104px;
+    width: 10.2rem;
     height: auto;
-    margin-left: 73px;
+    margin-left: 7.3rem;
+}
+
+/* --------------- footer --------------- */
+#footer .f-inner {
+    display: flex;
+    align-items: center;
+    height: 14rem;
+    padding: 0 5rem 0 14rem;
+}
+
+#footer .logo {
+    margin-right: 4.5rem;
+}
+
+#footer .copyright {
+    font-size: 1.4rem;
+    color: #676057;
+}
+
+#footer .f-inner > ul {
+    display: flex;
+    align-items: center;
+    margin-left: 9rem;
+}
+
+#footer .f-inner > ul li {
+    padding-right: 4rem;
+    font-size: 2rem;
+    color: #676057;
+}
+
+#footer .select {
+    width: 37rem;
+    margin-left: auto;
+}
+
+/* --------------- select --------------- */
+.select {
+    position: relative;
+    z-index: 100;
+    border: 1px solid #676057;
+    background: #fff;
+}
+
+.btn-select {
+    position: relative;
+    width: 100%;
+    height: 6rem;
+    padding: 0 2rem;
+    text-align: left;
+    font-size: 1.6rem;
+    color: #676057;
+}
+
+.btn-select::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 3rem;
+    transform: translate(0, -50%) rotate(180deg);
+    transition: .3s ease-in-out;
+    width: 2rem;
+    height: 1.3rem;
+    background: url('../img/icon/dropdown_arrow_up.svg') no-repeat center / cover;
+}
+
+.select-list {
+    display: none;
+    position: absolute;
+    left: -1px;
+    bottom: 6rem;
+    width: calc(100% + 2px);
+    border: 1px solid #676057;
+    border-bottom: 0;
+    background: #fff;
+    font-size: 1.6rem;
+    color: #676057;
+}
+
+.select-list li {
+    padding: 1.8rem;
+    border-bottom: 1px solid #B0ADA7;
+}
+
+.select-list li:last-child {
+    border: 0;
+}
+
+/* .select.on */
+.select.on .btn-select {
+    border-top: 1px solid #676057;
+}
+
+.select.on .btn-select::after {
+    transform: translate(0, -50%);
+}
+
+.select.on .select-list {
+    display: block;
+}
+
+/* ------------ section */
+section {
+    position: relative;
+}
+
+section > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ------------ cricle */
+.circle {
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+    background: #d3d3cf;
+    z-index: 0;
+
+    animation: move-circle 2s ease-in-out infinite alternate;
+}
+
+@keyframes move-circle {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(10rem);
+    }
+}
+
+
+/* tablet */
+@media screen and (max-width: 1280px) {
+    /* --------------- header --------------- */
+    #header {
+        height: 8rem;
+    }
+
+    #header .h-inner {
+        padding: 0 4.5rem;
+    }
+
+    #header .btn-menu {
+        width: 3.2rem;
+        height: 2.2rem;
+    }
+
+    #header .btn-menu span {
+        height: 2px;
+    }
+
+    /* 버튼 active 했을 떄 닫기버튼으로 변경 */
+    #header .btn-menu.active span:nth-child(1) {
+        top: 11px;
+    }
+
+    #header .btn-menu.active span:nth-child(3) {
+        top: 1.1rem;
+        width: 3.2rem;
+    }
+
+    #header .logo {
+        width: 10.2rem;
+        margin-left: 7.3rem;
+    }
+
+    /* --------------- footer --------------- */
+    #footer .f-inner {
+        height: 14rem;
+        padding: 0 5rem 0 14rem;
+    }
+
+    #footer .logo {
+        margin-right: 4.5rem;
+    }
+
+    #footer .copyright {
+        font-size: 1.4rem;
+    }
+
+    #footer .f-inner > ul {
+        margin-left: 9rem;
+    }
+
+    #footer .f-inner > ul li {
+        padding-right: 4rem;
+        font-size: 2rem;
+    }
+
+    #footer .select {
+        width: 37rem;
+    }
+
+    /* --------------- select --------------- */
+    .btn-select {
+        height: 6rem;
+        padding: 0 2rem;
+        font-size: 1.6rem;
+    }
+
+    .btn-select::after {
+        right: 3rem;
+        width: 2rem;
+        height: 1.3rem;
+    }
+
+    .select-list {
+        bottom: 6rem;
+        width: calc(100% + 2px);
+        font-size: 1.6rem;
+    }
+
+    .select-list li {
+        padding: 1.8rem;
+    }
 }

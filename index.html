@@ -5,22 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>minzy portfolio-sono</title>
-    <!--Import-->
-    <script type='text/javascript' src='./js/jquery-3.6.0.js'></script>
-    <script type='text/javascript' src='./js/common.js'></script>
-    <!--css-->
-    <link rel='stylesheet' href='./css/reset.css'>
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/font.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <!--favicon-->
-    <link rel="shortcut icon" href="./img/favicon.ico">
-    <link rel="icon" href="./img/favicon.ico">
+    <title>PROTFOLIO | SONO</title>
 
-    <!-- library -->
+    <!--css-->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
 
 </head>
 
@@ -43,58 +34,178 @@
         </header>
 
         <!--콘텐츠-->
-        <div id="wrap_content" class="main">
+        <main id="wrap-content" class="main">
             <div class="move-item">
                 <ul>
-                    <li>Businiess</li>
+                    <li>Business</li>
                     <li>Go for it 2030</li>
                     <li>Vision</li>
-                    <li>Mission</li>
+                    <li class="active">Mission</li>
                 </ul>
             </div>
-            <section class="slide_section">
+
+            <!-- slide-section -->
+            <section class="four slide-section">
                 <!-- Swiper -->
-                <div class="swiper main_slide">
+                <div class="swiper main-slide">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="./img/main/main_visual1.jpg" alt="메인 슬라이드 이미지1"/>
+                            <img src="./img/main/main_visual1.jpg" alt="메인 슬라이드 이미지1" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="./img/main/main_visual2.jpg" alt="메인 슬라이드 이미지2"/>
+                            <img src="./img/main/main_visual2.jpg" alt="메인 슬라이드 이미지2" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="./img/main/main_visual3.jpg" alt="메인 슬라이드 이미지3"/>
+                            <img src="./img/main/main_visual3.jpg" alt="메인 슬라이드 이미지3" />
                         </div>
                     </div>
-
                 </div>
-                <script>
-                    var swiper = new Swiper(".main_slide", {
-                        loop: true,
-                        autoplay : {
-                            delay: 2500,
-                        },
-                        spaceBetween: 30,
-                        effect: "fade",
-                        navigation: {
-                            nextEl: ".swiper-button-next",
-                            prevEl: ".swiper-button-prev",
-                        },
-                        pagination: {
-                            el: ".swiper-pagination",
-                            clickable: true,
-                        },
-                    });
-                </script>
-                <div class="slide_text">
-                    <span>To Bring Families</span>
+
+                <div class="slide-text">
+                    <span>To Bring Families</span><br />
                     <span>Close Together</span>
                 </div>
             </section>
-        </div>
+
+            <!-- intro-section -->
+            <section class="three intro-section">
+                <div class="img">
+                    <img src="./img/main/main_intro1.jpg" alt="intro 이미지" />
+                </div>
+
+                <div class="text">
+                    <span>To be the World's Creating</span>
+                    <span>Memories Worth</span>
+                    <span>Repeating Company</span>
+                </div>
+                <a href="#" onclick="return false"></a>
+
+                <div class="circle"></div>
+            </section>
+
+            <!-- text-section -->
+            <section class="two text-section">
+                <a href="#" onclick="return false"></a>
+                <div class="inner">
+                    <article>
+                        <h2>The World's Top <b>30</b> Hospitality Company</h2>
+                        <p>글로벌 호스피탈리티 기업 30위 달성</p>
+                    </article>
+                    <article>
+                        <h2>The World's Best Ranking in <b>2</b> or More Categories</h2>
+                        <p>글로벌 베스트 1,2개 이상 달성</p>
+                    </article>
+                    <article>
+                        <h2>The Best Ranking in <b>5</b> Different Categories Domestically</h2>
+                        <p>국내 베스트 1,5개 이상 달성</p>
+                    </article>
+                </div>
+                <div class="circle"></div>
+            </section>
+
+            <!-- business-section -->
+            <section class="one business-section">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <img src="./img/main/main_banner1.jpg" alt="호텔리조트 이미지"/>
+                            </div>
+                            <div class="link">
+                                <h3>Hotels & Resorts</h3>
+                                <a href="#" onclick="return false"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <img src="./img/main/main_banner2.jpg" alt="엔터 이미지"/>
+                            </div>
+                            <div class="link">
+                                <h3>Entertainments</h3>
+                                <a href="#" onclick="return false"></a>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <img src="./img/main/main_banner3.jpg" alt="골프 이미지"/>
+                            </div>
+                            <div class="link">
+                                <h3>Golf</h3>
+                                <a href="#" onclick="return false"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <img src="./img/main/main_banner4.jpg" alt="펫 이미지"/>
+                            </div>
+                            <div class="link">
+                                <h3>Pet</h3>
+                                <a href="#" onclick="return false"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <img src="./img/main/main_banner5.jpg" alt="라이프스타일 이미지"/>
+                            </div>
+                            <div class="link">
+                                <h3>Lifestyle</h3>
+                                <a href="#" onclick="return false"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <img src="./img/main/main_banner6.jpg" alt="비즈니스 이미지"/>
+                            </div>
+                            <div class="link">
+                                <h3>New Business</h3>
+                                <a href="#" onclick="return false"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer">
+            <div class="f-inner">
+                <h1 class="logo">
+                    <a href="./index.html">
+                        <img src="./img/logo/logo.svg" alt="소노로고" />
+                    </a>
+                </h1>
+
+                <p class="copyright">Copyright 2022 <b>SONO HOSPITALITY GROUP</b></p>
+
+                <ul>
+                    <li><a href="#" onclick="return false">Location</a></li>
+                    <li><a href="#" onclick="return false">Recruit</a></li>
+                    <li><a href="#" onclick="return false">Ethical Mangement</a></li>
+                    <li><a href="#" onclick="return false">Legal Notice</a></li>
+                </ul>
+
+                <div class="select">
+                    <button class="btn-select">FAMILY SITE</button>
+                    <ul class="select-list">
+                        <li><a href="#" onclick="return false">SONO INTERNATIONAL's HOTELS & RESORTS</a></li>
+                        <li><a href="#" onclick="return false">SONO INTERNATIONAL's E&C</a></li>
+                        <li><a href="#" onclick="return false">SONO SEASON</a></li>
+                        <li><a href="#" onclick="return false">DAEMYUNG I'M READY</a></li>
+                        <li><a href="#" onclick="return false">SONO PET CLUBS & RESORTS</a></li>
+                        <li><a href="#" onclick="return false">SONO INDUSTRIES</a></li>
+                        <li><a href="#" onclick="return false">DAEMYUNG WELFARE FOUNDATION</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </div>
     <!--// end wrap-->
 
+    <!--Import-->
+    <script type='text/javascript' defer src='./js/jquery-3.6.0.js'></script>
+    <script type='text/javascript' defer src='./js/common.js'></script>
+    <!-- library -->
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 </body>
 
 </html>

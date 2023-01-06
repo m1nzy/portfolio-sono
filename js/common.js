@@ -28,23 +28,39 @@ $(function () {
 	})
 
 	// ------- business 슬라이드 -------
-	const swiper = new Swiper('.mySwiper', {
-		slidesPerView: 3,
-		spaceBetween: 20,
-		freeMode: true,
-		slidesPerView: "auto",
-		pagination: {
-			el: ".swiper-pagination",
-			clickable: true,
-		},
-		scrollbar: {
-			el: ".swiper-scrollbar",
-			draggable: true,
-		},
-		mousewheel: true,
-		observer: true,
-		observeParents: true,
+	let vw = $(window).width();
+
+	$(window).on("resize", function () {
+	  var updateWid = $(window).width();
+  
+	  if (
+		(vw > 1024 && updateWid < 1024) ||
+		(vw < 1024 && updateWid > 1024)
+	  ) {
+		location.reload();
+	  }
 	});
+
+	if (vw >= 1024) {
+		const swiper = new Swiper('.mySwiper', {
+			slidesPerView: 3,
+			spaceBetween: 20,
+			freeMode: true,
+			slidesPerView: "auto",
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+			scrollbar: {
+				el: ".swiper-scrollbar",
+				draggable: true,
+			},
+			mousewheel: true,
+			observer: true,
+			observeParents: true,
+		});
+	} else {
+	}
 
 
 	// ------- 섹션이동 -------

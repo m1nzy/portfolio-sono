@@ -236,51 +236,89 @@ section > * {
 
     /* --------------- footer --------------- */
     #footer .f-inner {
-        height: 14rem;
-        padding: 0 5rem 0 14rem;
-    }
-
-    #footer .logo {
-        margin-right: 4.5rem;
-    }
-
-    #footer .copyright {
-        font-size: 1.4rem;
+        flex-wrap: wrap;
+        align-content: center;
+        position: relative;
+        padding: 0 4.5rem;
     }
 
     #footer .f-inner > ul {
-        margin-left: 9rem;
-    }
-
-    #footer .f-inner > ul li {
-        padding-right: 4rem;
-        font-size: 2rem;
+        width: 100%;
+        margin: 1.5rem 0 0;
     }
 
     #footer .select {
+        position: absolute;
+        top: 50%;
+        right: 4.5rem;
+        transform: translateY(-50%);
         width: 37rem;
     }
+}
 
-    /* --------------- select --------------- */
-    .btn-select {
+/* tablet */
+@media screen and (max-width: 1024px) {
+    /* --------------- header --------------- */
+    #header {
         height: 6rem;
+        background: rgba(255,255,255,0.7);
+    }
+
+    #header .h-inner {
+        position: relative;
         padding: 0 2rem;
-        font-size: 1.6rem;
     }
 
-    .btn-select::after {
-        right: 3rem;
-        width: 2rem;
-        height: 1.3rem;
+    #header .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
     }
 
-    .select-list {
-        bottom: 6rem;
-        width: calc(100% + 2px);
-        font-size: 1.6rem;
+    /* --------------- footer --------------- */
+    #footer {
+        padding: 4rem 2rem 15rem;
     }
 
-    .select-list li {
-        padding: 1.8rem;
+    #footer .f-inner {
+        display: block;
+        padding: 0;
+    }
+
+    #footer .f-inner .logo {
+        width: 82px;
+        height: 24px;
+    }
+
+    #footer .copyright {
+        margin-top: 1.6rem;
+    }
+
+    #footer .f-inner > ul {
+        display: block;
+        margin: 2rem 0 3rem;
+    }
+
+    #footer .f-inner > ul li {
+        margin-top: 0.5rem;
+        font-size: 1.7rem;
+    }
+
+    #footer .select {
+        top: auto;
+        right: auto;
+        transform: translate(0);
+        z-index: 15;
+        width: 100%;
+    }
+
+    #footer .btn-select {
+        height: 4.3rem;
+    }
+
+    #footer .select-list {
+        bottom: 4.3rem;
     }
 }

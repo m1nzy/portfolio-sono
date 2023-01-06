@@ -95,7 +95,7 @@
 
     width: 80%;
     line-height: 1.2;
-    font-size: 12rem;
+    font-size: 11rem;
     font-weight: 100;
     color: #fff;
 }
@@ -125,6 +125,7 @@
     top: 0;
     width: 70rem;
     height: 70rem;
+    background: #c6c4c0;
 }
 
 /* text-section */
@@ -271,8 +272,6 @@
         font-size: 7rem;
     }
     
-    .main .intro-section .text span {
-    }
     
     .main .intro-section a {
         bottom: 3rem;
@@ -315,9 +314,7 @@
     }
     
     .main .text-section .circle {
-        left: -40rem;
-        width: 184rem;
-        height: 184rem;
+        top: 12rem;
     }
     
     /* business-section */
@@ -347,5 +344,117 @@
     }
     
     .main .business-section .swiper-slide:hover a {
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main section {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10.5rem;
+    }
+
+    .main .slide-text {
+        left: 2rem;
+        font-size: 4rem;
+    }
+    
+    /* intro-section */
+    .main .intro-section {
+        margin-bottom: 7rem;
+    }
+    
+    .main .intro-section .img {
+        width: 100%;
+        height: 35rem;
+        margin: 0;
+    }
+    
+    .main .intro-section .text {
+        top: 15%;
+        left: 2rem;
+        font-size: 3rem;
+    }
+
+    .main .intro-section a {
+        bottom: 6rem;
+        right: auto;
+        left: 2rem;
+        width: 6rem;
+        height: 6rem;
+    }
+    
+    .main .intro-section .circle {
+        left: 4.5rem;
+        width: 70rem;
+        height: 70rem;
+    }
+    
+    /* text-section */
+    .main .text-section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .main .text-section a {
+        order: 2;
+        position: relative;
+        right: auto;
+        left: 2rem;
+        width: 6rem;
+        height: 6rem;
+    }
+    
+    .main .text-section .inner {
+        order: 1;
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    .main .text-section article {
+        width: 80%;
+        margin-bottom: 5rem;
+        font-size: 3rem;
+    }
+
+    .main .text-section article:nth-child(even) {
+        text-align: left;
+        margin-left: 0;
+    }
+    
+    .main .text-section p {
+        margin-top: 2rem;
+        font-size: 1.8rem;
+    }
+    
+    .main .text-section .circle {
+        top: 12rem;
+    }
+    
+    /* business-section */
+    .main .business-section {
+        padding: 0;
+    }
+    
+    .main .business-section .swiper-wrapper {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .main .business-section .swiper-slide {
+        width: 100% !important;
+        height: 36rem;
+    }
+    
+    .main .business-section .link {
+        border: none;
+        padding: 2rem 0 5rem;
+        font-size: 3rem;
+    }
+    
+    .main .business-section .link a {
+        width: 5rem;
+        height: 5rem;
     }
 }
